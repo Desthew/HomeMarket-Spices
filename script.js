@@ -1,9 +1,3 @@
-// Scroll to top on page load (but not when navigating to an anchor)
-if (!window.location.hash) {
-  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-  window.addEventListener("load", () => window.scrollTo(0, 0));
-}
-
 // Reliable anchor scroll for all buttons linking to #order
 document.addEventListener("click", (e) => {
   const link = e.target.closest('a[href="#order"]');
