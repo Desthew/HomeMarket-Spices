@@ -1,3 +1,7 @@
+// Scroll to top on page load
+window.addEventListener("load", () => window.scrollTo(0, 0));
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
 const $ = (sel, root=document) => root.querySelector(sel);
 const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
 function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
